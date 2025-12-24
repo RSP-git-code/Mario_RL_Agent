@@ -13,7 +13,7 @@ The goal of this project is to demonstrate correct environment setup, PPO traini
 - **Framework**: Stable-Baselines3
 - **Observation Space**: Grayscale frames
 - **Action Space**: SIMPLE_MOVEMENT
-- **Hardware**: CPU (Intel i7 laptop)
+- **Hardware**: GPU is better for faster training of RL model\CPU with i7 processo(but will take longer time for training)
 
 ---
 
@@ -30,7 +30,9 @@ The goal of this project is to demonstrate correct environment setup, PPO traini
 > Due to hardware and power limitations on a CPU-only setup, longer training runs were interrupted.  
 > The provided model represents an **early-stage trained agent** and demonstrates correct PPO training and evaluation.
 
----
 
-## 📁 Repository Structure
+---
+##  Mario RL 100K models perfomance:
+Video:
+
 
