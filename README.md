@@ -33,6 +33,6 @@ The goal of this project is to demonstrate correct environment setup, PPO traini
 
 ---
 ##  Mario RL 100K models perfomance:
-Video:
+Video: https://drive.google.com/file/d/1FB7zL3TlV5O5OL_Ktke0LZiXAm003ZGk/view?usp=drive_link
 
 
