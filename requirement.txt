@@ -1,0 +1,21 @@
+# Python version: 3.9.x
+
+numpy==1.23.5
+gym==0.21.0
+nes-py==8.2.1
+gym-super-mario-bros==7.4.0
+stable-baselines3==1.8.0
+torch==1.13.1
+torchvision==0.14.1
+torchaudio==0.13.1
+opencv-python==4.7.0.72
+matplotlib==3.7.5
+tqdm==4.66.5
+️
+python -3.9 -m venv mario_env
+mario_env\Scripts\activate:Give absolute path in which the venv\Script is present
+pip install -r requirements.txt
+Download Visual Studio BuildTools
+
+
+
