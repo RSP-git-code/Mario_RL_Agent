@@ -47,41 +47,41 @@ env = DummyVecEnv([make_env])
 #     save_path=checkpoint_dir
 # )
 
-# --------------------------
+
 # 3. PPO Model
-# --------------------------
-# model = PPO(
-#     "CnnPolicy",
-#     env,
-#     verbose=1,
-#     learning_rate=2.5e-4,
-#     n_steps=512,
-#     batch_size=64,
-#     gamma=0.99,
-#     gae_lambda=0.95,
-#     ent_coef=0.01,
-#     tensorboard_log=log_dir,
-#     device="cpu"  # force CPU for stability
-# )
 
-# --------------------------
+model = PPO(
+    "CnnPolicy",
+    env,
+    verbose=1,
+    learning_rate=2.5e-4,
+    n_steps=512,
+    batch_size=64,
+    gamma=0.99,
+    gae_lambda=0.95,
+    ent_coef=0.01,
+    tensorboard_log=log_dir,
+    device="cpu"  # force CPU for stability
+)
+
+
 # 4. Train the Agent
-# --------------------------
-# model.learn(
-#     total_timesteps=100000,
-#     callback=callback
-# )
 
-# # --------------------------
-# # 5. Save Final Model
-# # --------------------------
-# model.save("ppo_mario_final")
+model.learn(
+    total_timesteps=100000,
+    callback=callback
+)
 
-# print("Training finished successfully ")
+#
+#  5. Save Final Model
+
+model.save("ppo_mario_final")
+
+print("Training finished successfully ")
 model = PPO.load("ppo_mario_final", env=env)
 
 
-# # Continue training
+#  Continue training this will help to improve the agents perfomance in the  game through exploration and exploitation
 # model.learn(
 #     total_timesteps=500000,
 #     reset_num_timesteps=False
@@ -96,10 +96,10 @@ model = PPO.load("ppo_mario_final", env=env)
 
 # model.learn(total_timesteps=500000, reset_num_timesteps=False)
 
-# 3. Save the new progress
+#  Save the new progress
 # model.save("mario_models/ppo_mario_resumed_final")
 
-# # 3. Test the Model
+# 6. Test the Model
 
 state = env.reset()
 
@@ -109,6 +109,7 @@ while True:
 
     # IMPORTANT for DummyVecEnv
     env.render()
+
 
 
 
